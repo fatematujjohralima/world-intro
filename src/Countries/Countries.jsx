@@ -1,5 +1,6 @@
 import React, { use } from 'react';
 import Country from '../Country/Country';
+import './Countries.css';
 
 const Countries = ({ fetchCountries }) => {
     const countries = use(fetchCountries);
@@ -8,7 +9,7 @@ const Countries = ({ fetchCountries }) => {
     return (
         <div>
             <h3>There are {allCountries.length} countries in the world.</h3>
-            <div>
+            <div className='country-container'>
                 {
                     allCountries.map(country => <Country country={country} ></Country>)
                 }

@@ -1,0 +1,9 @@
+.country{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-container{
+    height: 120px;
+    width: 250px;
+}
