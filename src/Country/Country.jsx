@@ -5,12 +5,12 @@ import './Country.css';
 const Country = ({ country, handleVisitedCountries }) => {
     // console.log(country);
     const [visited, setVisited] = useState(false);
-    console.log(handleVisitedCountries);
+    // console.log(handleVisitedCountries);
     
 
     const handleVisited = () => {
         setVisited(!visited);
-        handleVisitedCountries();
+        handleVisitedCountries(country);
        
     }
         return (

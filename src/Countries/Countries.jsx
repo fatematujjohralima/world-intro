@@ -5,8 +5,8 @@ import './Countries.css';
 const Countries = ({ fetchCountries }) => {
 
     const [visitedCountries, setVisitedCountries] = useState([]);
-    const handleVisitedCountries = () => {
-        console.log('Visited country');
+    const handleVisitedCountries = (country) => {
+        setVisitedCountries([...visitedCountries, country]);
         
         }
 
@@ -23,6 +23,7 @@ const Countries = ({ fetchCountries }) => {
     return (
         <div>
             <h3>There are {allCountries.length} countries in the world.</h3>
+            <p>Visited Countries: {visitedCountries.length}</p>
             <div className='country-container'>
                 {
                     allCountries.map(country => <Country country={country} handleVisitedCountries={handleVisitedCountries} ></Country>)
