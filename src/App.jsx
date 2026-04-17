@@ -14,12 +14,11 @@ function App() {
   return (
     <>
     <h1>Hello World!</h1>
+    
     <Suspense fallback={'Loading...'}>
       <Countries fetchCountries={fetchCountries}></Countries>
     </Suspense>
-      
-
-      
+    
     </>
   )
 }
